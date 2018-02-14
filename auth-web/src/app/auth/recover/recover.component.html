@@ -1,0 +1,55 @@
+<mat-card style="width: 250px; margin: 0 auto; position: relative; top: 30px;">
+    
+    <div class="example-container" *ngIf="!validation">
+
+        <div style="text-align:center; margin-bottom: 35px;">
+            <mat-icon style="color: #3F51B5; font-size: 60px; margin-left: -38px">https</mat-icon>
+        </div>
+
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Usuário" [(ngModel)]="username" disabled>
+            <mat-icon matSuffix>person</mat-icon>
+        </mat-form-field>
+
+        <div class="box-help" (click)="onHelp()">
+            <mat-icon class="help">help</mat-icon>
+            <div class="help-label">Formato da senha</div>
+        </div>
+
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Nova Senha" [type]="hide1 ? 'password' : 'text'" [(ngModel)]="password">
+            <mat-icon matSuffix (click)="hide1 = !hide1">{{hide1 ? 'visibility' : 'visibility_off'}}</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Confirme Nova Senha" [type]="hide2 ? 'password' : 'text'" [(ngModel)]="password2">
+            <mat-icon matSuffix (click)="hide2 = !hide2">{{hide2 ? 'visibility' : 'visibility_off'}}</mat-icon>
+        </mat-form-field>
+
+        <div class="box-button">
+            <button mat-raised-button color="primary" class="example-full-width" (click)="save()">Enviar</button>
+        </div>
+
+        <div style="margin-top: 15px; color: #CD0000;" *ngIf="error">
+            <mat-icon>error</mat-icon>
+            <div style="margin-top: -26px; padding-left: 30px;">Usuário ou Senha incorreto!</div>
+        </div>
+    </div>
+  
+    <div class="spinner" *ngIf="validation && !error">
+        <mat-spinner></mat-spinner>
+    </div>
+
+    <div *ngIf="error">
+        <div style="margin-top: 15px; color: #CD0000;" *ngIf="error">
+            <mat-icon>error</mat-icon>
+            <div style="margin-top: -28px; padding-left: 30px;">Token inválido! <br>Não foi possível recuperar sua conta.</div>
+        </div>
+
+        <br />
+        
+        <div class="box-button">
+            <button mat-raised-button color="primary" class="example-full-widt" (click)="onBack()">Voltar ao login</button>
+        </div>
+    </div>
+</mat-card>

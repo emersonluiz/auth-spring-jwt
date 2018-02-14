@@ -1,0 +1,29 @@
+.example-full-width {
+    width: 100%;
+}
+
+.box-button {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.spinner {
+    margin-left: 25%;
+}
+
+.help {
+    color:  #1E90FF;
+   cursor: pointer;
+}
+
+.help-label {
+    margin-top: -26px;
+    padding-left: 30px;
+    color:  #1E90FF;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.box-help {
+    margin-bottom: 18px;
+}

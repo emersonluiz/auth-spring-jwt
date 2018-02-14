@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+body {
+    margin: 0px;
+    background: #F9F9F9
+}
+
+.header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 2;
+}
+
+.topPrincipal {
+    height: 129px;
+}
+
+.topAction {
+    height: 64px;
+}
+
+.circle {
+    width:50px;
+    height:50px;
+    border-radius:25px;
+    font-size:20px;
+    color:#fff;
+    line-height:27px;
+    text-align:center;
+    background: #66CDAA;
+}
+
+.done {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+}
+
+mat-card {
+  margin: 10px 0px;
+}

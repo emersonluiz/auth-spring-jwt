@@ -1,0 +1,23 @@
+<mat-card style="width: 250px; margin: 0 auto; position: relative; top: 30px;">
+  
+<div class="example-container">
+
+    <div style="text-align:center; margin-bottom: 35px;">
+        <mat-icon style="color: #3F51B5; font-size: 60px; margin-left: -38px">https</mat-icon>
+    </div>
+
+    <h3>Sua conta expirou!</h3>
+
+    <p>Gostaria de reativar sua conta?</p>
+
+    <br />
+
+    <div class="box-button">
+        <button mat-raised-button color="primary" (click)="reactivate()">Reativar</button>
+        &nbsp;
+        <button mat-raised-button (click)="onCancel()">Cancelar</button>
+    </div>
+
+</div>        
+
+</mat-card>

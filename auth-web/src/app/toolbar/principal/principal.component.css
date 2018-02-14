@@ -1,0 +1,11 @@
+mat-toolbar {
+    border-bottom: 1px solid white
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.exit {
+    cursor: pointer
+}
